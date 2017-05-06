@@ -1,0 +1,7 @@
+project: "exemplo 1"
+language: "Java"
+gof: "Abstract Factory"
+
+"Abstract Factory": "Widget"
+"Family": ["Qt"]
+"Products": { "Botao":["desenharA", "desenharB"] }
