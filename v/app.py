@@ -19,19 +19,11 @@ def main():
         data_model = yaml.load(config_file)
         config_file.close()
 
-        t = models.TKnife(data_model, 'chef.conf.knife')
-        t.put()
-        t.save()
-
-        t = models.TJuca(data_model, 'chef.conf.juca')
+        t = models.TEnp3s0f5(data_model, 'chef.conf.enp3s0f5')
         t.put()
         t.save()
 
         t = models.TInterface(data_model, 'chef.conf.interface')
-        t.put()
-        t.save()
-
-        t = models.TMakefile(data_model, 'chef.conf.makefile')
         t.put()
         t.save()
 
