@@ -1,4 +1,4 @@
-LANGUAGE       =                                              chef
+LANGUAGE       = chef
 DESIGN_PATTERN = conf
 YAML           = 1.yaml
 
