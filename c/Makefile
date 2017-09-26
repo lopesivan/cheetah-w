@@ -1,5 +1,5 @@
-LANGUAGE       = java
-DESIGN_PATTERN = af
+LANGUAGE       =                                              chef
+DESIGN_PATTERN = conf
 YAML           = 1.yaml
 
 model = ../m
@@ -16,7 +16,7 @@ $(view)/$(LANGUAGE)/$(DESIGN_PATTERN)/%.py:  $(model)/%.tmpl
 	cheetah-compile --flat $^ --odir $(view)/$(LANGUAGE)/$(DESIGN_PATTERN)
 
 view:
-	python parser.py $(view)/$(YAML)
+	python app.py $(view)/$(YAML)
 
 clean:
 	find $(view) -name "*.pyc" -delete
@@ -25,5 +25,7 @@ clean:
 	rm -rf $(view)/$(LANGUAGE)/$(DESIGN_PATTERN)
 	rm -rf $(view)/$(LANGUAGE)
 
-# END OF FILE
+build: all view
+rebuild: clean build
 
+# END OF FILE
