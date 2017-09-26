@@ -15,12 +15,12 @@ class TInterface(Factory):
         #self.tmpl.log = data_model['log']
 
     def put(self):
-        fileName = "%s.rb" % self.tmpl.name
+        fileName = "%s" % self.tmpl.name
         print ("File: %s" % fileName)
         print self.tmpl
 
     def save(self):
-        fileName = "%s.rb" % self.tmpl.name
+        fileName = "%s" % self.tmpl.name
         print ("Save File: %s" % fileName)
         open(fileName, 'w').write(str(self.tmpl))
 
