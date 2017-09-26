@@ -1,7 +1,25 @@
-project: "exemplo 1"
-language: "Java"
-gof: "Abstract Factory"
+validation: {'client_name': chef-validator}
 
-"Abstract Factory": "Widget"
-"Family": ["Qt"]
-"Products": { "Botao":["desenharA", "desenharB"] }
+log: { 'level': info,
+       'location': STDOUT }
+
+chef: { 'url': chef,
+        'port': 443,
+        'node_name': admin }
+
+user: dev
+chef_conf_dir: /etc/chef
+chef_path: /var/chef
+timeout: 300
+trusted_certs_dir: ~/.chef/trusted_certs
+
+project: { 'c': c,
+           'm': m,
+           'v': v }
+
+makefile: { 'kiko': chef,
+            'design_pattern': conf,
+            'yaml': 1.yaml }
+
+
+
