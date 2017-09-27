@@ -1,0 +1,23 @@
+;
+; BIND data file for local loopback interface
+;
+\$TTL	604800
+@	IN	SOA	<%= os.popen("hostname").read().strip() %>.${dns.domain}. root.${dns.domain}. (
+			    100		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+${dns.domain}.	IN	NS	<%= os.popen("hostname").read().strip() %>.${dns.domain}.
+${dns.domain}.	IN	A	${ip.address}
+;@	IN	NS	localhost.
+;@	IN	A	127.0.0.1
+;@	IN	AAAA	::1
+<%= os.popen("hostname").read().strip() %>	IN	A	${ip.address}
+router	IN	A	${ip.gateway}
+vendas	IN	A	192.168.2.50
+#for x in range(0, len($machines)):
+${machines[x].keys()[0]}	IN	A	${machines[x].values()[0]}
+#end for
+www	IN	CNAME	${dns.domain}.

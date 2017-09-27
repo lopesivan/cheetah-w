@@ -1,0 +1,19 @@
+;
+; BIND reverse data file for local loopback interface
+;
+\$TTL	604800
+@	IN	SOA	<%= os.popen("hostname").read().strip() %>.${dns.domain}. root.${dns.domain}. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+	IN	NS	<%= os.popen("hostname").read().strip() %>.
+1	IN	PTR	router.${dns.domain}.
+50	IN	PTR	vendas.${dns.domain}.
+40	IN	PTR	<%= os.popen("hostname").read().strip() %>.${dns.domain}.
+
+#for x in range(0, len($machines)):
+${machines[x].values()[0].split('.')[3]}	IN	PTR	${machines[x].keys()[0]}.${dns.domain}.
+#end for

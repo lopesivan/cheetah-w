@@ -1,0 +1,41 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	digitalhost.42algoritmos.local. root.42algoritmos.local. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+	IN	NS	digitalhost.
+1	IN	PTR	router.42algoritmos.local.
+50	IN	PTR	vendas.42algoritmos.local.
+40	IN	PTR	digitalhost.42algoritmos.local.
+
+40	IN	PTR	files.42algoritmos.local.
+40	IN	PTR	jet.42algoritmos.local.
+40	IN	PTR	dns.42algoritmos.local.
+40	IN	PTR	git.42algoritmos.local.
+40	IN	PTR	calibre.42algoritmos.local.
+42	IN	PTR	registry.42algoritmos.local.
+42	IN	PTR	chef.42algoritmos.local.
+42	IN	PTR	support.42algoritmos.local.
+42	IN	PTR	us.42algoritmos.local.
+42	IN	PTR	sharelatex.42algoritmos.local.
+42	IN	PTR	db.42algoritmos.local.
+42	IN	PTR	jserver.42algoritmos.local.
+42	IN	PTR	node.42algoritmos.local.
+42	IN	PTR	ruby.42algoritmos.local.
+42	IN	PTR	apache.42algoritmos.local.
+42	IN	PTR	nginx.42algoritmos.local.
+42	IN	PTR	chef.42algoritmos.local.
+42	IN	PTR	docker.42algoritmos.local.
+43	IN	PTR	dev.42algoritmos.local.
+43	IN	PTR	app.42algoritmos.local.
+43	IN	PTR	server.42algoritmos.local.
+43	IN	PTR	rest.42algoritmos.local.
+100	IN	PTR	milestone.42algoritmos.local.
+105	IN	PTR	android.42algoritmos.local.
+115	IN	PTR	sala.42algoritmos.local.

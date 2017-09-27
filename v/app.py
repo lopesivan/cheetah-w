@@ -19,11 +19,31 @@ def main():
         data_model = yaml.load(config_file)
         config_file.close()
 
-        t = models.TEnp3s0f5(data_model, 'chef.conf.enp3s0f5')
+        t = models.TEnp1s0(data_model, 'chef.conf.enp1s0')
         t.put()
         t.save()
 
         t = models.TInterface(data_model, 'chef.conf.interface')
+        t.put()
+        t.save()
+
+        t = models.TNamed_conf_options(data_model, 'chef.conf.named_conf_options')
+        t.put()
+        t.save()
+
+        t = models.TDb_127(data_model, 'chef.conf.db_127')
+        t.put()
+        t.save()
+
+        t = models.TDb_local(data_model, 'chef.conf.db_local')
+        t.put()
+        t.save()
+
+        t = models.TNamed_conf_local(data_model, 'chef.conf.named_conf_local')
+        t.put()
+        t.save()
+
+        t = models.THosts(data_model, 'chef.conf.hosts')
         t.put()
         t.save()
 

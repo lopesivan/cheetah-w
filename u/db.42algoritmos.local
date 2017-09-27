@@ -1,0 +1,45 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	digitalhost.42algoritmos.local. root.42algoritmos.local. (
+			    100		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+42algoritmos.local.	IN	NS	digitalhost.42algoritmos.local.
+42algoritmos.local.	IN	A	192.168.2.40
+;@	IN	NS	localhost.
+;@	IN	A	127.0.0.1
+;@	IN	AAAA	::1
+digitalhost	IN	A	192.168.2.40
+router	IN	A	192.168.2.1
+vendas	IN	A	192.168.2.50
+files	IN	A	192.168.2.40
+jet	IN	A	192.168.2.40
+dns	IN	A	192.168.2.40
+git	IN	A	192.168.2.40
+calibre	IN	A	192.168.2.40
+registry	IN	A	192.168.2.42
+chef	IN	A	192.168.2.42
+support	IN	A	192.168.2.42
+us	IN	A	192.168.2.42
+sharelatex	IN	A	192.168.2.42
+db	IN	A	192.168.2.42
+jserver	IN	A	192.168.2.42
+node	IN	A	192.168.2.42
+ruby	IN	A	192.168.2.42
+apache	IN	A	192.168.2.42
+nginx	IN	A	192.168.2.42
+chef	IN	A	192.168.2.42
+docker	IN	A	192.168.2.42
+dev	IN	A	192.168.2.43
+app	IN	A	192.168.2.43
+server	IN	A	192.168.2.43
+rest	IN	A	192.168.2.43
+milestone	IN	A	192.168.2.100
+android	IN	A	192.168.2.105
+sala	IN	A	192.168.2.115
+www	IN	CNAME	42algoritmos.local.

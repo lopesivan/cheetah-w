@@ -1,0 +1,7 @@
+auto enp1s0
+iface enp1s0 inet static
+address 192.168.2.40
+netmask 255.255.255.0
+network 192.168.2.0
+gateway 192.168.2.1
+

@@ -25,7 +25,4 @@ clean:
 	rm -rf $(view)/$(LANGUAGE)/$(DESIGN_PATTERN)
 	rm -rf $(view)/$(LANGUAGE)
 
-build: all view
-rebuild: clean build
-
 # END OF FILE
